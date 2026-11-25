@@ -79,7 +79,14 @@ namespace LINQ1
             #endregion
 
 
+            #region Question 8
+            Console.WriteLine("-------------------------------------------------------------------------");
+            var sorted = ProductList.OrderBy(p => p.Category).ThenByDescending(p => p.UnitPrice);
+            foreach (var p in sorted)
+                Console.WriteLine($"{p.Category} - {p.ProductName} - {p.UnitPrice}");
+            Console.WriteLine("-------------------------------------------------------------------------");
 
+            #endregion
 
         }
     }
