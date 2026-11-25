@@ -34,6 +34,13 @@ namespace LINQ1
             Console.WriteLine("-------------------------------------------------------------------------");
             #endregion
 
+            #region Question 4
+
+            var between = ProductList.Where(p => p.UnitPrice >= 10 && p.UnitPrice <= 30);
+            foreach (var p in between)
+                Console.WriteLine($"{p.ProductName} - {p.UnitPrice}");
+            Console.WriteLine("-------------------------------------------------------------------------");
+            #endregion
 
         }
     }
