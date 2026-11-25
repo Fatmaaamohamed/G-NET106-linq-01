@@ -99,6 +99,18 @@ namespace LINQ1
             Console.WriteLine("-------------------------------------------------------------------------");
             #endregion
 
+
+
+            #region Question 10
+            var orders = from c in CustomerList
+                         from o in c.Orders
+                         where o.OrderDate.Year >= 1997
+                         select new { c.CustomerID, o.OrderDate };
+            foreach (var x in orders)
+                Console.WriteLine($"{x.CustomerID} - {x.OrderDate:yyyy-MM-dd}");
+            Console.WriteLine("-------------------------------------------------------------------------");
+            #endregion
+
         }
     }
 }
