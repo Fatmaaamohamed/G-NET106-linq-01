@@ -10,7 +10,12 @@ namespace LINQ1
 
         {
 
-        
+            #region Question 1
+            var seafood = ProductList.Where(p => p.Category == "Seafood");
+            foreach (var p in seafood)
+                Console.WriteLine($"{p.ProductName} - {p.UnitPrice}");
+
+            #endregion
 
         }
     }
