@@ -17,6 +17,15 @@ namespace LINQ1
 
             #endregion
 
+
+            #region Question 2
+            Console.WriteLine("-------------------------------------------------------------------------");
+            var names = ProductList.Select(p => p.ProductName);
+            foreach (var n in names)
+                Console.WriteLine(n);
+            Console.WriteLine("-------------------------------------------------------------------------");
+            #endregion
+
         }
     }
 }
