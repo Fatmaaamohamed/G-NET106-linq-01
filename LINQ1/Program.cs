@@ -111,6 +111,12 @@ namespace LINQ1
             Console.WriteLine("-------------------------------------------------------------------------");
             #endregion
 
+            #region Question 11
+            var positions = ProductList.Select((p, i) => new { Position = i + 1, p.ProductName });
+            foreach (var x in positions)
+                Console.WriteLine($"{x.Position}. {x.ProductName}");
+            Console.WriteLine("-------------------------------------------------------------------------");
+            #endregion
         }
     }
 }
