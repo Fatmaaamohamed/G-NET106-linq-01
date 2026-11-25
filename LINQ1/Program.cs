@@ -66,6 +66,21 @@ namespace LINQ1
             Console.WriteLine("-------------------------------------------------------------------------");
             #endregion
 
+
+            #region Question 7
+            var result3 = ProductList.Select((p, i) => new
+            {
+
+                index = i + 1,
+                p.ProductName
+            });
+            foreach (var x in result3)
+                Console.WriteLine($"{x.index}. {x.ProductName}");
+            #endregion
+
+
+
+
         }
     }
 }
