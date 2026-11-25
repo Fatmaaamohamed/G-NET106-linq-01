@@ -117,6 +117,16 @@ namespace LINQ1
                 Console.WriteLine($"{x.Position}. {x.ProductName}");
             Console.WriteLine("-------------------------------------------------------------------------");
             #endregion
+
+
+            #region Question 12
+            string[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+            var words = Arr.OrderBy(w => w.Length)
+                           .ThenBy(w => w, StringComparer.OrdinalIgnoreCase);
+            foreach (var w in words)
+                Console.WriteLine(w);
+            Console.WriteLine("-------------------------------------------------------------------------");
+            #endregion
         }
     }
 }
