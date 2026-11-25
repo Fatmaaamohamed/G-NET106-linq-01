@@ -26,6 +26,15 @@ namespace LINQ1
             Console.WriteLine("-------------------------------------------------------------------------");
             #endregion
 
+            #region Question 3
+            var byPrice = ProductList.OrderBy(p => p.UnitPrice);
+            foreach (var p in byPrice)
+                Console.WriteLine($"{p.ProductName} - {p.UnitPrice}");
+
+            Console.WriteLine("-------------------------------------------------------------------------");
+            #endregion
+
+
         }
     }
 }
