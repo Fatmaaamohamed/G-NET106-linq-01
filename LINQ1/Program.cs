@@ -127,6 +127,15 @@ namespace LINQ1
                 Console.WriteLine(w);
             Console.WriteLine("-------------------------------------------------------------------------");
             #endregion
+
+
+            #region Question 13
+            string[] digits = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+            var result4 = digits.Where(d => d.Length > 1 && d[1] == 'i').Reverse();
+            foreach (var d in result4)
+                Console.WriteLine(d);
+            Console.WriteLine("-------------------------------------------------------------------------");
+            #endregion
         }
     }
 }
