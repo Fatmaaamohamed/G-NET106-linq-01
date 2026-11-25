@@ -51,6 +51,21 @@ namespace LINQ1
             Console.WriteLine("-------------------------------------------------------------------------");
             #endregion
 
+            #region Question 6
+
+            var result2 = ProductList.Select(p => new
+            {
+                Name = p.ProductName,
+                Price = p.UnitPrice,
+                StockStatus = p.UnitsInStock>0 ?  "Available" :"Out of Stock"
+            });
+
+            foreach (var x in result2)
+                Console.WriteLine($"{x.Name} - {x.Price} - {x.StockStatus}");
+
+            Console.WriteLine("-------------------------------------------------------------------------");
+            #endregion
+
         }
     }
 }
