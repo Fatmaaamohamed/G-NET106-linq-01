@@ -42,6 +42,15 @@ namespace LINQ1
             Console.WriteLine("-------------------------------------------------------------------------");
             #endregion
 
+
+            #region Question 5
+
+            var result = ProductList.Where(p => p.UnitsInStock > 0 && p.Category == "Condiments");
+            foreach (var p in result    )
+                Console.WriteLine($"{p.ProductName} - {p.UnitsInStock}");
+            Console.WriteLine("-------------------------------------------------------------------------");
+            #endregion
+
         }
     }
 }
